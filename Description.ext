@@ -1,0 +1,136 @@
+class CfgClient {
+    class SpawnerCfg 
+	{
+        #include "scripts\spawnerCfg.ext"
+    };
+	
+};
+
+enableDebugConsole = 1;
+respawnButton=1;
+respawnOnStart=-1;
+disabledAI=1;
+
+onLoadName="WW2 by NORD Team";
+loadScreen="";
+author = "NORD Team";
+OnLoadMission="Добро пожаловать";
+
+class CfgFunctions
+{
+	#include "modules\grad-persistence\cfgFunctions.hpp"
+	class HP
+	{
+		class Client
+		{
+			file = "client";
+		};
+		class Server
+		{
+			file = "server";
+		};
+	};
+};
+//Discord info
+class CfgDiscordRichPresence {
+    applicationID="1243289776384249896";             // Provided by discord
+    defaultDetails="Nord | Мемельская операция";            // Upper text
+    defaultState="By NORD Project Team";              // Lower text  
+    defaultLargeImageKey="th1q275iq7qzo4f1jr8jmq";      // Large image
+    defaultLargeImageText="";     // Large image hover text
+    defaultSmallImageKey="";      // Small image
+    defaultSmallImageText="";     // Small image hover text
+    defaultButtons[]={};          // Button texts and urls
+    useTimeElapsed=1;             // Show time elapsed since the player connected (1 - true, 0 - false)
+};
+
+class CfgGradPersistence {
+    missionTag = "Korsac_Nord_mission";
+    loadOnMissionStart = 0;
+    missionWaitCondition = "true";
+    playerWaitCondition = "true";
+
+    //пресет для полного сохранения
+    saveUnits = 3;
+    saveVehicles = 3;
+    saveContainers = 3;
+    saveStatics = 3;
+    saveGradFortificationsStatics = 3;
+    saveMarkers = 3;
+    saveTasks = 3;
+    saveTriggers = 3;
+
+    savePlayerInventory = 0;
+    savePlayerDamage = 0;
+    savePlayerPosition = 0;
+    savePlayerMoney = 0;
+
+    //пресет для сохранения только денег
+    // saveUnits = 0;
+    // saveVehicles = 0;
+    // saveContainers = 0;
+    // saveStatics = 0;
+    // saveGradFortificationsStatics = 0;
+    // saveMarkers = 0;
+    // saveTasks = 0;
+    // saveTriggers = 0;
+
+    // savePlayerInventory = 0;
+    // savePlayerDamage = 0;
+    // savePlayerPosition = 0;
+    // savePlayerMoney = 1;
+
+    // saveTeamAccounts = 0;
+
+    blacklist[] = {
+        "B_Truck_01_mover_F",
+        "MapBoard_seismic_F"
+    };
+
+	class customVariables {
+        class ACE_isUnconscious {
+            varName = "ACE_isUnconscious";
+            varNamespace = "player";
+            public = 0;
+        };
+        class ace_medical_bodyPartStatus {
+            varName = "ace_medical_bodyPartStatus";
+            varNamespace = "player";
+            public = 0;
+        };
+        class grad_lbm_myFunds {
+            varName = "grad_lbm_myFunds";
+            varNamespace = "player";
+            public = 1;
+        };
+        class shopItems {
+            varName = "shopItems";
+            varNamespace = "player";
+            public = 0;
+        };
+    };
+};
+
+class CfgDebriefingSections {
+    class acex_killTracker {
+        title = "NORD|WW2|ФРАГИ";
+        variable = "acex_killTracker_outputText";
+    };
+};
+
+class CfgDebriefing
+{
+	class shoot
+	{
+		title = "Стрельба на базе!";
+		description = "Перестань стрелять на базе, не нарушай правила!";
+		picture = "KIA";
+	};
+
+    class ban
+	{
+		title = "Вы заблокированы";
+		description = "Бан - это плохо";
+		picture = "KIA";
+	};
+};
