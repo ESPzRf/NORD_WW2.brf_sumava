@@ -9,6 +9,7 @@ class CfgClient {
 enableDebugConsole = 1;
 respawnButton=1;
 respawnOnStart=-1;
+showGPS = 0;
 disabledAI=1;
 
 onLoadName="WW2 by NORD Team";
@@ -133,4 +134,27 @@ class CfgDebriefing
 		description = "Бан - это плохо";
 		picture = "KIA";
 	};
+};
+
+class CfgSounds
+{
+    sounds[] = {};
+    class rus_victory
+    {
+        name = "TNO POBEDA SOVETOV";
+        sound[] = {"audio\brokenarrow.ogg", 1, 1};
+        titles[] = {0, "-"};
+    };
+	class ukr_victory
+    {
+        name = "TNO POBEDA nemvtzev";
+        sound[] = {"audio\goosestep.ogg", 1, 1};
+        titles[] = {0, "-"};
+    };
+	class battle_start
+    {
+        name = "nachalo";
+        sound[] = {"audio\battle_start.ogg", 1, 1};
+        titles[] = {0, "-"};
+    };
 };

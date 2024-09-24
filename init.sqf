@@ -3,6 +3,7 @@
 [] execVM "scripts\zeus\opened_eh.sqf";
 [] execVM "scripts\arsenals.sqf";
 [] execVM "ROS_hitreaction\scripts\ROS_HitReaction.sqf";
+[] execVM "scripts\teleport.sqf";
 
 pvpfw_chatIntercept_executeCommand = compile preProcessFilelineNumbers "scripts\chat\executeCommand.sqf";
 
