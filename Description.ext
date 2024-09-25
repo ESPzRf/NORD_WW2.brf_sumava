@@ -1,4 +1,4 @@
-class CfgClient {
+﻿class CfgClient {
     class SpawnerCfg 
 	{
         #include "scripts\spawnerCfg.ext"
@@ -11,7 +11,7 @@ respawnButton=1;
 respawnOnStart=-1;
 showGPS = 0;
 disabledAI=1;
-
+briefingName = "WW2";
 onLoadName="WW2 by NORD Team";
 loadScreen="";
 author = "NORD Team";

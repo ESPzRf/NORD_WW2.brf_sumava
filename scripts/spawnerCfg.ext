@@ -1,31 +1,24 @@
-class common_rf_spawner_class //ЛОГИСТИКА ВЕРМАХТА
+class logistic_wer_spawner_class //ЛОГИСТИКА НЕМЦЕВ
 {
     conditionToAccess = "true";
     
-    class common_rf_spawner_class
+    class logistic_wer_spawner_class
 	{
         displayName = "Общий запрос техники";
         vehicles[] =
         {
-            {"rhs_2b14_82mm_vdv",2,"true"},
-			{"RHS_Ural_Zu23_VV_01",1,"true"},
-			{"Z_TAG_ural432031",2,"true"},
-			{"RHS_Ural_Fuel_VV_01",1,"true"},
-			{"Z_TAG_mtoat",1,"true"},
-			{"tbd_120mm_pm_43",1,"true"},
-			{"LAV_MSTA_red",1,"true"},
-            {"CUP_O_MTLB_pk_Green_RU",2,"true"},
-            {"MMM_BTRD_r",3,"true"},
-            {"rhs_kamaz5350_vmf",10,"true"},
-            {"V_TAG_ASN_233115_kmf",3,"true"}
+            {"Land_WoodenBox_F",-1,"true"},
+			{"ACE_Track",-1,"true"},
+			{"ACE_Wheel",-1,"true"}
 		};
         spawnPoints[] =
         {
-            {"1",{"common_rf_spawnplace"}}
+            {"1",{"logistic_wer_spawn"}}
         };
         
     };
 };
+
 
 class nederland_spawner_class //Недерланд сс
 {
@@ -36,12 +29,474 @@ class nederland_spawner_class //Недерланд сс
         displayName = "Запрос техники";
         vehicles[] =
         {
-			{"rhsusf_m998_w_4dr",1,"true"}, //
-			{"rhsusf_m1151_m2crows_usmc_wd",1,"true"} //
+			{"Lib_ger_SdKfz251FFV_tarn",2,"true"}, //
+			{"fow_v_sdkfz_222_camo_foliage_ger_ss",1,"true"}, //
+			{"fow_v_sdkfz_250_camo_foliage_ger_heer",1,"true"}, //
+			{"fow_v_kubelwagen_camo_ger_heer",2,"true"}, //
+			{"LIB_Pak40",1,"true"}, //
+			{"fow_w_mg42_deployed_s_ger_heer",2,"true"} //
         };
         spawnPoints[] =
         {
             {"1",{"nederland_spawnplace"}}
+        };
+        
+    };
+};
+class nordland_spawner_class //Нордланд сс
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == nordland_spawner)"; // "(playerSide in [west,independent])"
+    
+    class nordland_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"Lib_ger_SdKfz251FFV_tarn",2,"true"}, //
+			{"fow_v_sdkfz_222_camo_foliage_ger_ss",1,"true"}, //
+			{"fow_v_sdkfz_250_camo_foliage_ger_heer",1,"true"}, //
+			{"fow_v_kubelwagen_camo_ger_heer",2,"true"}, //
+			{"LIB_Pak40",1,"true"}, //
+			{"fow_w_mg42_deployed_s_ger_heer",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"nordland_spawnplace"}}
+        };
+        
+    };
+};
+
+class hermann_spawner_class //Герман фон блять кого нахуй
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == hermann_spawner)"; // "(playerSide in [west,independent])"
+    
+    class hermann_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_GER_PzKpfwV_Camo",2,"true"}, //
+			{"LIB_GER_PzKpfwIV_H_Tarn",2,"true"}, //
+			{"R71Ger44Camo",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"hermann_spawnplace"}}
+        };
+        
+    };
+};
+
+class secmot_spawner_class //74 мотобат
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == secmot_spawner)"; // "(playerSide in [west,independent])"
+    
+    class secmot_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_opelblitz_open_camo",2,"true"}, //
+			{"Lib_ger_SdKfz251FFV_camo",1,"true"}, //
+			{"R71Ger44",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"secmot_spawnplace"}}
+        };
+        
+    };
+};
+
+class werrazved_spawner_class //19 разведка
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == werrazved_spawner)"; // "(playerSide in [west,independent])"
+    
+    class werrazved_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"fow_v_sdkfz_250_ger_heer",2,"true"}, //
+			{"R71Ger44",4,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"werrazved_spawnplace"}}
+        };
+        
+    };
+};
+
+class flak_spawner_class //272 ПВО
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == flak_spawner)"; // "(playerSide in [west,independent])"
+    
+    class flak_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_FlaK_36",2,"true"}, //
+			{"LIB_OpelBlitz_Ammo",1,"true"}, //
+			{"LIB_GER_Kubel",2,"true"} //
+			{"LIB_SdKfz_7_AA_KOTH_DLV",2,"true"} //
+			{"LIB_ger_SdKfz7_Tarn53",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"flak_spawnplace"}}
+        };
+        
+    };
+};
+
+class nsap_spawner_class //19 саперная
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == nsap_spawner)"; // "(playerSide in [west,independent])"
+    
+    class nsap_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"R71Ger44Camo",2,"true"}, //
+			{"LIB_opelblitz_open_Tarn",1,"true"}, //
+			{"R71Ger44Camo",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"nsap_spawnplace"}}
+        };
+        
+    };
+};
+
+class shtabwer_spawner_class //штаб
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == shtabwer_spawner)"; // "(playerSide in [west,independent])"
+    
+    class shtabwer_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_GER_GazM1",2,"true"}, //
+			{"LIB_GER_KubelGreyHood",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"shtabwer_spawnplace"}}
+        };
+        
+    };
+};
+
+class pehwer_spawner_class //штаб
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == pehwer_spawner)"; // "(playerSide in [west,independent])"
+    
+    class pehwer_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_GER_KubelGreyHood",2,"true"}, //
+			{"LIB_opelblitz_open_Feldgrau",2,"true"}, //
+			{"LIB_ger_SdKfz7_Tarn53",2,"true"}, //
+			{"R71GerPre43",4,"true"}, //
+			{"Lib_ger_SdKfz251FFV_feldgraucamo",2,"true"}, //
+			{"LIB_ger_opelblitz_medical",1,"true"}, //
+			{"LIB_ger_opelblitz_command",1,"true"}, //
+			{"LIB_Pak40",3,"true"}, //
+			{"LIB_GrWr34_g",2,"true"}, //
+			{"LIB_MG42_Lafette_Deployed",2,"true"}, //
+			{"fow_w_mg42_deployed_s_ger_heer",2,"true"}, //
+			{"LIB_ger_Flak30_Camo",1,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"pehwer_spawnplace"}}
+        };
+        
+    };
+};
+
+class tankwer_spawner_class //танкисты
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == tankwer_spawner)"; // "(playerSide in [west,independent])"
+    
+    class tankwer_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_GER_PzKpfwVI_B_sPA505_Feldgrau",1,"true"}, //
+			{"LIB_GER_PzKpfwV_Feldgrau",1,"true"}, //
+			{"LIB_GER_PzKpfwV_Tarn",1,"true"}, //
+			{"LIB_GER_PzKpfwV_Camo",2,"true"}, //
+			{"LIB_GER_PzKpfwVI_E_sPA503_Tarn",2,"true"}, //
+			{"LIB_GER_PzKpfwIV_H_Tarn",2,"true"}, //
+			{"LIB_GER_PzKpfwIV_H_Feldgrau",2,"true"}, //
+			{"LIB_GER_StuG_III_G_Tarn",2,"true"}, //
+			{"LIB_OpelBlitz_Ammo",1,"true"}, //
+			{"LIB_OpelBlitz_Parm",1,"true"}, //
+			{"R71GerPre43",2,"true"}, //
+			{"LIB_ger_opelblitz_citerne",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"tankwer_spawn"}}
+        };
+        
+    };
+};
+
+class luftwaffe_spawner_class //люфтваффе
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == luftwaffe_spawner)"; // "(playerSide in [west,independent])"
+    
+    class luftwaffe_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"sab_fl_bf109k",3,"true"}, //
+			{"sab_fl_ju88a",1,"true"}, //
+			{"sab_fl_ju52",1,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"luftwaffe_spawn"}}
+        };
+        
+    };
+};
+
+//////////////////////// СОВЕТЫ
+
+class pehsov_spawner_class //Пехота
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == pehsov_spawner)"; // "(playerSide in [west,independent])"
+    
+    class pehsov_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_sov_M3_Scout_IFL",2,"true"}, //
+			{"ifa3_gazaa",2,"true"}, //
+			{"LIB_SOV_Willys_MB",2,"true"}, //
+			{"ifa3_gazaa_sap",2,"true"}, //
+			{"LIB_SOV_ZiS5VMed_RKKA",1,"true"}, //
+			{"LIB_SOV_ZiS5V_RKKA",1,"true"}, //
+			{"R71RusOlive",4,"true"}, //
+			{"LIB_Maxim_M30_base",4,"true"}, //
+			{"LIB_BM37",2,"true"}, //
+			{"LIB_61K",1,"true"}, //
+			{"LIB_Zis3",3,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"pehsov_spawn"}}
+        };
+        
+    };
+};
+
+class sovshtab_spawner_class //Штаб
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == sovshtab_spawner)"; // "(playerSide in [west,independent])"
+    
+    class sovshtab_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_SOV_Willys_MB",2,"true"}, //
+			{"LIB_SOV_GazM1",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"sovshtab_spawn"}}
+        };
+        
+    };
+};
+
+class tanksov_spawner_class //танки
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == tanksov_spawner)"; // "(playerSide in [west,independent])"
+    
+    class tanksov_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_US6_Ammo",1,"true"}, //
+			{"LIB_Zis5v_Fuel",2,"true"}, //
+			{"LIB_Zis6_Parm",1,"true"}, //
+			{"R71RusDark",2,"true"}, //
+			{"LIB_JS2_43",3,"true"}, //
+			{"LIB_sov_T3485_Kaki",4,"true"}, //
+			{"LIB_SOV_SU85_Kaki",2,"true"}, //
+			{"LIB_sov_T3476_Kaki",4,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"tanksov_spawn"}}
+        };
+        
+    };
+};
+
+class vvssov_spawner_class //летка
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == vvssov_spawner)"; // "(playerSide in [west,independent])"
+    
+    class vvssov_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"sab_fl_yak3",3,"true"}, //
+			{"LIB_SOV_Pe2_Camo",1,"true"}, //
+			{"LIB_Li2",1,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"vvssov_spawn"}}
+        };
+        
+    };
+};
+
+class artdivisionsov_spawner_class //летка
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == artdivisionsov_spawner)"; // "(playerSide in [west,independent])"
+    
+    class artdivisionsov_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_US6_Open",2,"true"}, //
+			{"LIB_US6_Ammo",1,"true"}, //
+			{"ifa3_m30_arty",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"artdivisionsov_spawn"}}
+        };
+        
+    };
+};
+
+class razvedkasov_spawner_class //летка
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == razvedkasov_spawner)"; // "(playerSide in [west,independent])"
+    
+    class razvedkasov_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"R71RusOlive",4,"true"}, //
+			{"ifa3_ba64B",2,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"razvedkasov_spawn"}}
+        };
+        
+    };
+};
+
+class pehvender_spawner_class //летка
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == pehvender_spawner)"; // "(playerSide in [west,independent])"
+    
+    class pehvender_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"ifa3_gazaa",2,"true"}, //
+			{"R71RusOlive",2,"true"}, //
+			{"LIB_sov_M3_Scout_IFL",1,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"pehvender_spawn"}}
+        };
+        
+    };
+};
+
+class smersh_spawner_class //летка
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == smersh_spawner)"; // "(playerSide in [west,independent])"
+    
+    class smersh_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"LIB_sov_M3_Scout_IFL",1,"true"}, //
+			{"R71RusOlive",3,"true"}, //
+			{"IFA3_DSHkM_Mini_TriPod",1,"true"}, //
+			{"LIB_SOV_GazM1",1,"true"}, //
+			{"LIB_SOV_Willys_MB",2,"true"}, //
+			{"ifa3_gazaa",3,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"smersh_spawn"}}
+        };
+        
+    };
+};
+
+class rezerv_sov_spawner_class //РЕЗЕРВЫ СОВЕТОВ
+{
+    conditionToAccess = "true";
+    
+    class rezerv_sov_spawner_class
+	{
+        displayName = "Общий запрос техники";
+        vehicles[] =
+        {
+            {"ifa3_gazaa",2,"true"},
+			{"LIB_sov_T3485_Kaki",2,"true"},
+			{"LIB_sov_M3_Scout_IFL",3,"true"},
+			{"LIB_Zis3",1,"true"},
+            {"LIB_Maxim_M30_base",2,"true"}
+		};
+        spawnPoints[] =
+        {
+            {"1",{"rezerv_sov_spawn"}}
+        };
+        
+    };
+};
+
+class logistic_sov_spawner_class //ЛОГИСТИКА СОВЕТОВ
+{
+    conditionToAccess = "true";
+    
+    class logistic_sov_spawner_class
+	{
+        displayName = "Общий запрос техники";
+        vehicles[] =
+        {
+            {"Land_WoodenBox_F",-1,"true"},
+			{"ACE_Track",-1,"true"},
+			{"ACE_Wheel",-1,"true"}
+		};
+        spawnPoints[] =
+        {
+            {"1",{"logistic_sov_spawn"}}
         };
         
     };
