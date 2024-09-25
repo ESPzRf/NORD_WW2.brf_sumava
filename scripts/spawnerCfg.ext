@@ -4,7 +4,7 @@ class logistic_wer_spawner_class //ЛОГИСТИКА НЕМЦЕВ
     
     class logistic_wer_spawner_class
 	{
-        displayName = "Общий запрос техники";
+        displayName = "Общий запрос логистики";
         vehicles[] =
         {
             {"Land_WoodenBox_F",-1,"true"},
@@ -140,8 +140,8 @@ class flak_spawner_class //272 ПВО
         {
 			{"LIB_FlaK_36",2,"true"}, //
 			{"LIB_OpelBlitz_Ammo",1,"true"}, //
-			{"LIB_GER_Kubel",2,"true"} //
-			{"LIB_SdKfz_7_AA_KOTH_DLV",2,"true"} //
+			{"LIB_GER_Kubel",2,"true"}, //
+			{"LIB_SdKfz_7_AA_KOTH_DLV",2,"true"}, //
 			{"LIB_ger_SdKfz7_Tarn53",2,"true"} //
         };
         spawnPoints[] =
@@ -487,7 +487,7 @@ class logistic_sov_spawner_class //ЛОГИСТИКА СОВЕТОВ
     
     class logistic_sov_spawner_class
 	{
-        displayName = "Общий запрос техники";
+        displayName = "Общий запрос логистики";
         vehicles[] =
         {
             {"Land_WoodenBox_F",-1,"true"},

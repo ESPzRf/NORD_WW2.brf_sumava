@@ -75,7 +75,7 @@ vostok_fnc_winRus = {
         [] spawn {
             playSound "rus_victory";
             ["audio\rus_victory.paa"] spawn BIS_fnc_textTiles;
-            titleText ["<t color='#ffffff' size='8'>Победа</t><t color='#1616a8' size='8'> Р<t color='#a81616' size='8'>Ф!</t></t><br/>", "PLAIN", -1, true, true];
+            titleText ["<t color='#ffffff' size='8'>Победа</t><t color='#1616a8' size='8'> РККА<t color='#a81616' size='8'>Ф!</t></t><br/>", "PLAIN", -1, true, true];
         };
     }] remoteExec ["call", -2, false];
 };
@@ -86,7 +86,7 @@ vostok_fnc_winUkr = {
         [] spawn {
             playSound "ukr_victory";
             ["audio\ukr_victory.paa"] spawn BIS_fnc_textTiles;
-            titleText ["<t color='#1469d9' size='8'>Победа</t><t color='#d9d214' size='8'> Украины!</t><br/>", "PLAIN", -1, true, true];
+            titleText ["<t color='#1469d9' size='8'>Победа</t><t color='#d9d214' size='8'> Вермахта!</t><br/>", "PLAIN", -1, true, true];
         };
     }] remoteExec ["call", -2, false];
 };
