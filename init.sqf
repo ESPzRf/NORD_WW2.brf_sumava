@@ -3,7 +3,6 @@
 [] execVM "scripts\zeus\opened_eh.sqf";
 [] execVM "scripts\arsenals.sqf";
 [] execVM "ROS_hitreaction\scripts\ROS_HitReaction.sqf";
-[] execVM "scripts\teleport.sqf";
 
 pvpfw_chatIntercept_executeCommand = compile preProcessFilelineNumbers "scripts\chat\executeCommand.sqf";
 
@@ -82,5 +81,8 @@ downKeyEH =(findDisplay 46) displayAddEventHandler ["KeyDown", {
 4 enableChannel [false, false];
 6 enableChannel [false, true];
 3 enableChannel [false, false];
+
+CHBN_adjustBrightness = 1;
+CHBN_adjustColor = [0.5,0.7,1];
 
 
