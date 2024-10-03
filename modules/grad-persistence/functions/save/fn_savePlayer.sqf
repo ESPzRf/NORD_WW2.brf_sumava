@@ -31,6 +31,13 @@ if (isNil "_uid") then {
 };
 if (_uid == "") exitWith {};
 
+if (!([_unit] call ace_common_fnc_isAwake)) exitWith  
+{ 
+    [_playersDataHash,_uid,false] call CBA_fnc_hashSet;
+    saveProfileNamespace;
+    diag_log "not_saving_2";
+}; 
+
 private _unitDataHash = [[],false] call CBA_fnc_hashCreate;
 
 if (_savePlayerInventory) then {
@@ -90,12 +97,7 @@ if (_savePlayerInventory) then {
 };
 
 if (_savePlayerDamage) then {
-    private _allHitPointsDamage = getAllHitPointsDamage _unit;
-    private _damage = if (count _allHitPointsDamage > 2) then {
-        [_allHitPointsDamage select 0,_allHitPointsDamage select 2]
-    } else {
-        [[],[]]
-    };
+    private _damage = [_unit] call ace_medical_fnc_serializeState;
     [_unitDataHash,"damage",_damage] call CBA_fnc_hashSet;
 };
 

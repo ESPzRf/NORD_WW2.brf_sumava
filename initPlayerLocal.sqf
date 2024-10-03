@@ -19,4 +19,5 @@ if(!hasInterface) exitWith {}; // If headless then exit
 [] execVM "sherpa_scripts\ini_zeus.sqf";
 [] execVM "onPlayerConnected.sqf";
 [] execVM "sherpa_scripts\ini_safeZone.sqf";
+[] execVM "scripts\teleport.sqf";
 0 spawn {[] execVM "sherpa_scripts\ini_arsenalRestrict.sqf"};

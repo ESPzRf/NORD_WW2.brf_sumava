@@ -264,6 +264,9 @@ class luftwaffe_spawner_class //люфтваффе
         {
 			{"sab_fl_bf109k",3,"true"}, //
 			{"sab_fl_ju88a",1,"true"}, //
+			{"LIB_OpelBlitz_Ammo",1,"true"}, //
+			{"LIB_OpelBlitz_Parm",1,"true"}, //
+			{"LIB_ger_opelblitz_citerne",1,"true"}, //
 			{"sab_fl_ju52",1,"true"} //
         };
         spawnPoints[] =
@@ -362,6 +365,9 @@ class vvssov_spawner_class //летка
         {
 			{"sab_fl_yak3",3,"true"}, //
 			{"LIB_SOV_Pe2_Camo",1,"true"}, //
+			{"LIB_US6_Ammo",1,"true"}, //
+			{"LIB_Zis5v_Fuel",1,"true"}, //
+			{"LIB_Zis6_Parm",1,"true"}, //
 			{"LAV_Li2",1,"true"} //
         };
         spawnPoints[] =

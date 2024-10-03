@@ -40,11 +40,9 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    if ([missionConfigFile >> "CfgGradPersistence", "loadOnMissionStart", 0] call BIS_fnc_returnConfigEntry == 1) then {
-        _waitCondition = [missionConfigFile >> "CfgGradPersistence", "missionWaitCondition", ""] call BIS_fnc_returnConfigEntry;
-        if (_waitCondition == "") then {_waitCondition = "true"};
-        [{call compile _this}, {[] call grad_persistence_fnc_requestLoadPlayer}, _waitCondition] call CBA_fnc_waitUntilAndExecute;
-    };
+    _waitCondition = [missionConfigFile >> "CfgGradPersistence", "missionWaitCondition", ""] call BIS_fnc_returnConfigEntry;
+    if (_waitCondition == "") then {_waitCondition = "true"};
+    [{call compile _this}, {[] call grad_persistence_fnc_requestLoadPlayer}, _waitCondition] call CBA_fnc_waitUntilAndExecute;
 };
 
 

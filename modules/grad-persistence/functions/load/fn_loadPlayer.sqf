@@ -38,12 +38,7 @@ private _fnc_waitUntil = {
 
     if (_savePlayerDamage) then {
         private _unitHits = [_unitDataHash,"damage"] call CBA_fnc_hashGet;
-        if (!(_unitHits isEqualType false) && {count _unitHits > 0}) then {
-            _unitHits params ["_unitHitNames","_unitHitDamages"];
-            {
-                _unit setHit [_x,_unitHitDamages select _forEachIndex];
-            } forEach _unitHitNames;
-        };
+        [_unit, _unitHits] remoteExec ["ace_medical_fnc_deserializeState", _unit]
     };
 
     if (_savePlayerPosition) then {
