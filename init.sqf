@@ -84,5 +84,3 @@ downKeyEH =(findDisplay 46) displayAddEventHandler ["KeyDown", {
 
 CHBN_adjustBrightness = 1;
 CHBN_adjustColor = [0.5,0.7,1];
-
-

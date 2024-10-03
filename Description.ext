@@ -7,6 +7,7 @@
 };
 
 enableDebugConsole = 1;
+cba_settings_hasSettingsFile=1;
 respawnButton=1;
 respawnOnStart=-1;
 showGPS = 0;
@@ -46,7 +47,7 @@ class CfgDiscordRichPresence {
 };
 
 class CfgGradPersistence {
-    missionTag = "Korsac_Nord_mission";
+    missionTag = "ww2_nord_mission";
     loadOnMissionStart = 0;
     missionWaitCondition = "true";
     playerWaitCondition = "true";
