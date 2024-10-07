@@ -76,7 +76,8 @@ class hermann_spawner_class //Герман фон блять кого нахуй
         displayName = "Запрос техники";
         vehicles[] =
         {
-			{"LIB_GER_PzKpfwV_Camo",2,"true"}, //
+			{"LIB_GER_PzKpfwV_Camo",1,"true"}, //
+			{"LIB_GER_PzKpfwV_Feldgrau",1,"true"}, //
 			{"LIB_GER_PzKpfwIV_H_Tarn",2,"true"}, //
 			{"R71Ger44Camo",2,"true"} //
         };
@@ -141,7 +142,7 @@ class flak_spawner_class //272 ПВО
 			{"LIB_FlaK_36",2,"true"}, //
 			{"LIB_OpelBlitz_Ammo",1,"true"}, //
 			{"LIB_GER_Kubel",2,"true"}, //
-			{"LIB_SdKfz_7_AA_KOTH_DLV",2,"true"}, //
+			{"LIB_SdKfz_7_AA",2,"true"}, //
 			{"LIB_ger_SdKfz7_Tarn53",2,"true"} //
         };
         spawnPoints[] =
@@ -152,7 +153,30 @@ class flak_spawner_class //272 ПВО
     };
 };
 
-class nsap_spawner_class //19 саперная
+class ssrazved_spawner_class //11 саперная
+{
+    conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == ssrazved_spawner)"; // "(playerSide in [west,independent])"
+    
+    class ssrazved_spawner_class
+	{
+        displayName = "Запрос техники";
+        vehicles[] =
+        {
+			{"fow_v_kubelwagen_camo_ger_heer",2,"true"}, //
+			{"LIB_opelblitz_open_Tarn",3,"true"}, //
+			{"fow_v_sdkfz_250_camo_foliage_ger_heer",2,"true"}, //
+			{"LIB_SdKfz234_1",1,"true"}, //
+			{"R71Ger44",1,"true"} //
+        };
+        spawnPoints[] =
+        {
+            {"1",{"ssrazved_spawnplace"}}
+        };
+        
+    };
+};
+
+class nsap_spawner_class //11 саперная
 {
     conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == nsap_spawner)"; // "(playerSide in [west,independent])"
     
@@ -161,9 +185,12 @@ class nsap_spawner_class //19 саперная
         displayName = "Запрос техники";
         vehicles[] =
         {
-			{"R71Ger44Camo",2,"true"}, //
-			{"LIB_opelblitz_open_Tarn",1,"true"}, //
-			{"R71Ger44Camo",2,"true"} //
+			{"Lib_ger_SdKfz7Pak40_Camo",1,"true"}, //
+			{"LIB_ger_SdKfz7_Tarn53",2,"true"}, //
+			{"LIB_opelblitz_open_Tarn",3,"true"}, //
+			{"fow_v_sdkfz_250_camo_foliage_ger_heer",1,"true"}, //
+			{"fow_w_mg42_deployed_s_ger_heer",1,"true"}, //
+			{"LIB_MG42_Lafette_Deployed",1,"true"} //
         };
         spawnPoints[] =
         {
@@ -172,7 +199,6 @@ class nsap_spawner_class //19 саперная
         
     };
 };
-
 class shtabwer_spawner_class //штаб
 {
     conditionToAccess = "(side player == civilian) || (((group player) getVariable ""regSpawner"") == shtabwer_spawner)"; // "(playerSide in [west,independent])"
@@ -473,10 +499,11 @@ class rezerv_sov_spawner_class //РЕЗЕРВЫ СОВЕТОВ
         displayName = "Общий запрос техники";
         vehicles[] =
         {
-            {"ifa3_gazaa",2,"true"},
+            {"ifa3_gazaa",5,"true"},
 			{"LIB_sov_T3485_Kaki",2,"true"},
 			{"LIB_sov_M3_Scout_IFL",3,"true"},
-			{"LIB_Zis3",1,"true"},
+			{"LIB_SOV_Willys_MB",2,"true"}, //
+			{"LIB_Zis3",2,"true"},
             {"LIB_Maxim_M30_base",2,"true"}
 		};
         spawnPoints[] =
