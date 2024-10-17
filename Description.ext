@@ -7,6 +7,7 @@
 };
 
 enableDebugConsole = 1;
+cba_settings_hasSettingsFile=0;
 respawnButton=1;
 respawnOnStart=-1;
 showGPS = 0;
