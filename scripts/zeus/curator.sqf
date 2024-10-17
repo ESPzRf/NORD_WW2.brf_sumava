@@ -74,4 +74,3 @@ _dedman = format["dedman%1", _index];
 		[-1, compile format["if (player == %1) then {%1 sideChat 'you are Curator';}", _myName]] call CBA_fnc_globalExecute;
 	}, _this] call CBA_fnc_globalExecute;
 };
-
