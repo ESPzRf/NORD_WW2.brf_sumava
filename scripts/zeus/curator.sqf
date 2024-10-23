@@ -6,6 +6,8 @@ zeusmodule = [
 	"76561198436619210", /// долбаеб
 	"76561198796101729", /// Женя
 	"76561199001274039" /// Валера
+	"76561198191661642", /// kiritocun / ds
+	"76561199246126737" /// elochka8675 / ds
 ];
 if (!(_playerUID in zeusmodule)) exitwith {};
 if ((side player != civilian) && (_playerUID != "76561198436619210")) exitwith {};
