@@ -6,7 +6,6 @@
 
 pvpfw_chatIntercept_executeCommand = compile preProcessFilelineNumbers "scripts\chat\executeCommand.sqf";
 
-
 // Reset and old EH IDs and scripthandles
 if (!isNil "pvpfw_chatIntercept_handle")then{
 	terminate pvpfw_chatIntercept_handle
